@@ -2,12 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="O364DnzLOrRyP9EZuGpcyJ0dfFY2gWz5UaABsJLURjI" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eucerin Anti-Pigment</title>
 
-    <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,14 +16,16 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1025848640168761');
+
+fbq('init', 'SEU_PIXEL_ID');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1025848640168761&ev=PageView&noscript=1"
-/></noscript>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
-    
+
 <style>
 
 
@@ -56,18 +57,23 @@ body{
     border:1px solid #ddd;
     margin-bottom:10px;
     border-radius:8px;
-    position: 1s;
+    position: relative;
+    transition: 1s;
 }
+
 .galeria img:hover{
-    transform: scale(1.40);
+    transform: scale(1.25);
 }
+
 .produto-principal img{
     width:100%;
     max-width:450px;
     display:block;
     margin:auto;
 }
-
+.produto-principal img:hover{
+  transform: scale(1.40);
+}
 .info h1{
     font-size:34px;
     margin-bottom:15px;
@@ -121,17 +127,83 @@ body{
 }
 
 
-    @media screen and (max-width:1200px){
-    
-    .container{
-    max-width:100px;
-    margin:30px auto;
-    background:#fff;
-    border-radius:10px;
-    display:grid;
-    grid-template-columns:120px 1fr 350px;
-    gap:30px;
-    padding:30px;
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width:900px){
+
+.container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:15px;
+    margin:0;
+    border-radius:0;
+}
+
+.galeria{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.galeria img{
+    width:90px;
+    min-width:90px;
+    margin:0;
+}
+
+.produto-principal{
+    text-align:center;
+}
+
+.produto-principal img{
+    width:100%;
+    max-width:350px;
+}
+
+.info h1{
+    font-size:26px;
+    line-height:1.4;
+    text-align:center;
+}
+
+.avaliacao,
+.preco,
+.desconto{
+    text-align:center;
+}
+
+.preco{
+    font-size:34px;
+}
+
+.compra{
+    padding:15px;
+}
+
+.botao{
+    width:100%;
+    font-size:20px;
+    padding:18px;
+}
+
+table{
+    display:block;
+    width:100%;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+th,td{
+    padding:10px;
+}
+
+.produto-principal img:hover,
+.galeria img:hover{
+    transform:none;
 }
 
 }
